@@ -39,7 +39,7 @@ def user_links_list_for_index(message):
         credentials = ServiceAccountCredentials.from_json_keyfile_name(JSON_KEY_FILE, scopes=Scopes)
         http = credentials.authorize(httplib2.Http())
         content = {}
-        content['url'] = "https://listing3d.com/"
+        content['url'] = link_for_index
         content['type'] = "URL_UPDATED"
         json_ctn = json.dumps(content) 
                 
@@ -64,7 +64,7 @@ def user_links_list_for_deleting(message):
         credentials = ServiceAccountCredentials.from_json_keyfile_name(JSON_KEY_FILE, scopes=Scopes)
         http = credentials.authorize(httplib2.Http())
         content = {}
-        content['url'] = "https://listing3d.com/"
+        content['url'] = link_for_index
         content['type'] = "URL_DELETED"
         json_ctn = json.dumps(content) 
                 
